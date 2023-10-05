@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #222;
+    color: #eee;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+header {
+    height: 70px;
+    background-color: #444;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    padding: 20px;
+    display: block;
+    color: #eee;
+}
+
+.menu .navbar ul li a:hover {
+    color: #ffffffc8;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.logo {
+    font-size: 20px;
+    color: #adff2f;
+}
+
+.logo:hover {
+    color: #affd1dc9;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background-color: #444;
+    margin: 50px;
+    padding: 20px;
+    height: 400px;
+    width: auto;
+    display: block;
+    color: #adff2f;
+    border-radius: 10%;
+    text-align: center;
+    font-size: 20px;
+}
+
+input {
+    width: 90%;
+    margin: 40px 0;
+    height: 70px;
+    background-color: #222;
+    color: #adff2f;
+    box-shadow: 3px 3px 5px #adff2f;
+}
+
+input::placeholder {
+    color: #eee;
+    font-size: 20px;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    background-color: #adff2f;
+    color: #333;
+    box-shadow: 3px 3px 5px #adff2f;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #affd1dc9;
+}
+
+@media(max-width:991px) {
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #444;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+}
